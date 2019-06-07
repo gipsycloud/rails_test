@@ -12,11 +12,17 @@
   <% end %>
 
   <div class="actions">
-    <%= form.label: title %>
-    <% form.text_field :title %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
 
-    <% form.label :body %>
-    <% form.text_area :body %>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+
+    <p>
+      <%= form.label :photo %>
+      <%= form.file_field :photo %>
+    </p>
+
   </div>
 
   <div class="actions">
