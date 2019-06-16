@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @user.name %></h1>
+<p><%= @user.email %></p>
+
+<% @user.posts.each do |post| %>
+ <h2><%= link_to post.title, post %></h2>
+   <% if post.photo.present? %>
+    <p><%= image_tag post.photo.url(:thumb) %></p>
+  <% end %>
+<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
