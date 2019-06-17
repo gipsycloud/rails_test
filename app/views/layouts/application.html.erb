@@ -13,9 +13,14 @@
 
     <!-- Milligram CSS minified -->
     <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap" async defer></script>
   </head>
 
   <body>
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg.html_safe, class: "alert alert-#{name}") %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
