@@ -25,3 +25,7 @@ Things you may want to cover:
 # rails_test
 
 * url = https://openclassrooms.com/en/courses/4510766-build-dynamic-websites-with-rails/4703886-add-photos-to-posts
+
+https://www.sitepoint.com/geocoder-display-maps-and-find-places-in-rails/
+
+https://github.com/bodrovis/Sitepoint-source/tree/master/Geocoder
