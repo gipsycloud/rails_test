@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   get 'site/home'
 
   resources :posts
-  resources :users
+  resources :places, except: [:update, :edit, :destroy]
+  resources :distances, only: [:new, :create]
 
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  root 'places#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
